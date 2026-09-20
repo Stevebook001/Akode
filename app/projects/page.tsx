@@ -1,7 +1,4 @@
-export const metadata = {
-  title: "Projects & Sites | Ibrahim Akanni Ahmad",
-  description: "The projects, products and web properties connected to Ibrahim Akanni Ahmad and Novella Matrix.",
-};
+export const metadata = { title: "Projects & Sites | Ibrahim Akanni Ahmad", description: "The projects, products and web properties connected to Ibrahim Akanni Ahmad and Novella Matrix." };
 
 const sites = [
   ["AELIA AI", "AI platform and intelligence ecosystem.", "https://aeliaai.org"],
@@ -18,38 +15,24 @@ const sites = [
   ["M-I-S", "Additional digital project.", "https://m-i-s.netlify.app"],
   ["Masfada IntelSch", "Digital project deployment.", "https://masfadatintelsch.netlify.app"],
   ["Masfada IntelSch — Vercel", "Additional Masfada IntelSch deployment.", "https://masfadatintelsch.vercel.app"],
-  ["Ibrahim Ahmad", "Founder portfolio and central digital identity.", "https://ibrahimahmad2.netlify.app"],
+  ["Ibrahim Ahmad — Netlify", "Earlier founder portfolio deployment.", "https://ibrahimahmad2.netlify.app"],
+];
+
+const ecosystem = [
+  ["AELIA AI", "Intelligence, AI tools, documents, search, creative workflows and developer capabilities."],
+  ["SeaChat", "Communication, identity, communities, creators and premium services."],
+  ["Novella Matrix", "The wider ecosystem connecting technology, publishing, SEO, advertising and digital products."],
+  ["AKODE", "Learning, building, scaling and documenting practical software development."],
+  ["Publishing", "Author profiles, book discovery, editorial features and legitimate external publication links."],
 ];
 
 export default function Projects() {
-  return (
-    <main className="page">
-      <p className="eyebrow">PROJECT DIRECTORY</p>
-      <h1>The ecosystem, mapped in one place.</h1>
-      <p className="lead">
-        This directory connects the portfolio to the projects and deployments
-        that have been part of the wider journey. Some are active, some are
-        experiments or alternate deployments, and their status can change over time.
-      </p>
-      <div className="grid">
-        {sites.map(([name, description, url]) => (
-          <article className="card" key={url}>
-            <p className="eyebrow">SITE / PROJECT</p>
-            <h2>{name}</h2>
-            <p>{description}</p>
-            <a href={url} target="_blank" rel="noreferrer">Open website →</a>
-          </article>
-        ))}
-      </div>
-      <section className="feature">
-        <h2>How the ecosystem fits together</h2>
-        <p>
-          Novella Matrix is the wider ecosystem. AELIA AI explores intelligence,
-          SeaChat explores communication, AKODE explores software building, and
-          the publishing and author work explores discovery for stories and creators.
-          This portfolio is the map connecting those directions.
-        </p>
-      </section>
-    </main>
-  );
+  return <main className="page">
+    <p className="eyebrow">PROJECT DIRECTORY</p><h1>The ecosystem, mapped in one place.</h1>
+    <p className="lead">A large portfolio needs an index. This directory keeps the different products, deployments and experiments connected while clearly treating each as its own property.</p>
+    <div className="stats"><div><strong>15+</strong><span>known web properties</span></div><div><strong>5</strong><span>ecosystem pillars</span></div><div><strong>4</strong><span>core product brands</span></div><div><strong>1</strong><span>central portfolio</span></div></div>
+    <div className="grid">{sites.map(([name,description,url]) => <article className="card" key={url}><p className="eyebrow">SITE / PROJECT</p><h2>{name}</h2><p>{description}</p><a href={url} target="_blank" rel="noreferrer">Open website →</a></article>)}</div>
+    <section className="feature"><p className="eyebrow">THE MAP</p><h2>How the ecosystem fits together.</h2><div className="grid">{ecosystem.map(([title,text])=><div className="mini-card" key={title}><h3>{title}</h3><p>{text}</p></div>)}</div></section>
+    <section className="feature"><h2>Publishing destinations</h2><p>The portfolio also connects author and book discovery to external publication destinations. These links are intentionally kept as destinations rather than copied content.</p><div className="actions"><a className="button" href="/authors/namelesswriter">Namelesswriter</a><a className="button alt" href="https://m.pahina.com/novel/2611437824.html" target="_blank" rel="noreferrer">Branded Omega →</a><a className="button alt" href="https://m.pahina.com/novel/3828441344.html" target="_blank" rel="noreferrer">Second novel →</a></div></section>
+  </main>;
 }
