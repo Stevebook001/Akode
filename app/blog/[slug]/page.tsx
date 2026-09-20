@@ -5,13 +5,17 @@ export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = postMap[params.slug];
-  return post ? { title: `${post.title} | Ibrahim Akanni Ahmad`, description: post.excerpt } : {};
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = postMap[slug];
+  return post
+    ? { title: `${post.title} | Ibrahim Akanni Ahmad`, description: post.excerpt }
+    : {};
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = postMap[params.slug];
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = postMap[slug];
   if (!post) notFound();
 
   return (
@@ -22,9 +26,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       {post.content.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
       {post.sources?.length ? (
         <section className="card">
-          <h2>Sources & further reading</h2>
+          <h2>Sources &amp; further reading</h2>
           {post.sources.map((source) => (
-            <p key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label} →</a></p>
+            <p key={source.url}>
+              <a href={source.url} target="_blank" rel="noreferrer">{source.label} →</a>
+            </p>
           ))}
         </section>
       ) : null}
