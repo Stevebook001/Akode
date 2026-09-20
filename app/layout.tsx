@@ -4,11 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ibrahim Akanni Ahmad | Founder, Developer & Author",
-  description: "Official website of Ibrahim Akanni Ahmad — founder of Novella Matrix, builder of AELIA AI, SeaChat and AKODE, and published multigenre author.",
+  description: "The digital headquarters of Ibrahim Akanni Ahmad — founder, builder, author and creator of a growing technology, publishing and AI ecosystem.",
   metadataBase: new URL("https://ibrahimahmad.vercel.app"),
   openGraph: {
     title: "Ibrahim Akanni Ahmad",
-    description: "Founder, developer, AI builder and published multigenre author.",
+    description: "Founder, developer, AI builder, publisher and author.",
     type: "website",
   },
 };
@@ -21,11 +21,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a className="brand" href="/">IA<span>.</span></a>
           <nav>
             <a href="/">Home</a><a href="/about">About</a><a href="/projects">Projects</a>
-            <a href="/books">Books</a><a href="/blog">Blog</a><a href="/ai">AI</a><a href="/contact">Contact</a>
+            <a href="/experience">Experience</a><a href="/books">Books</a><a href="/blog">Blog</a>
+            <a href="/now">Now</a><a href="/contact">Contact</a>
           </nav>
         </header>
         {children}
-        <footer>© {new Date().getFullYear()} Ibrahim Akanni Ahmad · Novella Matrix</footer>
+        <footer>
+          <div className="footer-links">
+            <a href="/projects">Projects</a><a href="/experience">Experience</a><a href="/gallery">Gallery</a>
+            <a href="/notes">Notes</a><a href="/books">Books</a><a href="/blog">Articles</a><a href="/ai">AI</a><a href="/contact">Contact</a>
+          </div>
+          © {new Date().getFullYear()} Ibrahim Akanni Ahmad · Novella Matrix
+        </footer>
         <Analytics />
       </body>
     </html>
