@@ -1,0 +1,1 @@
+import type {MetadataRoute} from "next";export default function sitemap():MetadataRoute.Sitemap{return[{url:"https://ibrahimahmad.vercel.app/"},{url:"https://ibrahimahmad.vercel.app/ai"},{url:"https://ibrahimahmad.vercel.app/contact"}]}
