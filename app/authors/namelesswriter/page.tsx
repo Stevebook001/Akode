@@ -1,1 +1,24 @@
-export const metadata={title:"Namelesswriter | Author Feature"}; export default function Author(){return <main className="page"><p className="eyebrow">AUTHOR FEATURE</p><h1>Amadi Gift · Namelesswriter</h1><p className="lead">A reader-discovery feature for an author whose stories explore romance, drama, suspense, complex characters and meaningful relationships.</p><section className="card"><h2>Featured novel: Branded Omega</h2><p>This feature introduces the novel to visitors through a dedicated book page and gives readers a direct route to the author's published work.</p><a href="/blog/branded-omega">Read the Branded Omega feature →</a></section><p className="muted">Author social page: not provided yet.</p></main>
+export const metadata = { title: "Namelesswriter | Author Feature" };
+
+export default function Author() {
+  return (
+    <main className="page">
+      <p className="eyebrow">AUTHOR FEATURE</p>
+      <h1>Amadi Gift · Namelesswriter</h1>
+      <p className="lead">
+        A reader-discovery feature for an author whose stories explore romance,
+        drama, suspense, complex characters and meaningful relationships.
+      </p>
+      <section className="card">
+        <h2>Featured novel: Branded Omega</h2>
+        <p>
+          This feature introduces the novel to visitors through a dedicated
+          book page and gives readers a direct route to the author&apos;s
+          published work.
+        </p>
+        <a href="/blog/branded-omega">Read the Branded Omega feature →</a>
+      </section>
+      <p className="muted">Author social page: not provided yet.</p>
+    </main>
+  );
+}
