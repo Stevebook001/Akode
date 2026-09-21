@@ -11,7 +11,7 @@ const areas = [
   ["Learning by shipping", "Turning real build problems into documentation, reusable patterns and better decisions for the next project."],
 ];
 
-const stack = [
+const stack: [string, number, string, string][] = [
   ["TypeScript / TSX", 55, "Typed application code and React/Next.js components. TypeScript helps define data shapes, catch mistakes earlier and make larger codebases easier to refactor.", "/blog/why-typescript-matters-in-modern-web-products"],
   ["JavaScript", 20, "The runtime language behind browser behavior, React, APIs and Node.js. It connects interface interactions with application logic.", "/blog/what-javascript-does-beyond-the-interface"],
   ["CSS", 15, "The presentation layer: responsive layouts, spacing, typography, cards, navigation, mobile behavior and visual identity.", "/blog/javascript-typescript-css-and-html-in-my-stack"],
