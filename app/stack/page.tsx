@@ -1,6 +1,6 @@
 export const metadata = { title: "Tech Stack | Ibrahim Akanni Ahmad", description: "The technologies and engineering layers used across the Ibrahim Akanni Ahmad portfolio." };
 
-const groups = [
+const groups: [string, string[]][] = [
   ["Frontend", ["Next.js", "React", "TypeScript / TSX", "JavaScript", "HTML", "CSS"]],
   ["Backend", ["Node.js", "API routes", "server-side validation", "REST-style integrations"]],
   ["Data & services", ["PostgreSQL / SQL concepts", "MongoDB concepts", "structured content", "JSON APIs"]],

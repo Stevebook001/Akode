@@ -5,11 +5,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Ibrahim Akanni Ahmad | Founder, Developer & Author",
   description: "The digital headquarters of Ibrahim Akanni Ahmad — founder, builder, author and creator of a growing technology, publishing and AI ecosystem.",
-  metadataBase: new URL("https://ibrahimahmad.vercel.app"),
+  metadataBase: new URL("https://akode-nine.vercel.app"),
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Ibrahim Akanni Ahmad",
     description: "Founder, developer, AI builder, publisher and author.",
     type: "website",
+    url: "https://akode-nine.vercel.app",
   },
 };
 
