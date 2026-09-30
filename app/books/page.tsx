@@ -22,7 +22,7 @@ export default function Books() {
       <section className="card">
         <p className="eyebrow">BOOK PAGE</p><h2>Isla Was Never Her Name</h2>
         <p>By SAB. Romance, mystery, secrets and character-driven storytelling.</p>
-        <div className="book-cover-placeholder"><span>BOOK COVER</span><small>Upload the official cover here when SAB sends it.</small></div>
+        <div className="book-cover-wrap"><img className="book-cover-image" src="https://i.ibb.co/TBQx1mcB/IMG-20260929-WA0111.jpg" alt="Isla Was Never Her Name book cover by SAB" loading="lazy" /></div>
         <div className="actions"><a className="button" href="/book/isla-was-never-her-name">Shareable AKODE page →</a><a className="button alt" href="https://page.joyreadings.com/h5-book-share.html?id=22540&lang=en&is_from_myscroll=1&is_composition_contest=0" target="_blank" rel="noreferrer">Read on Joyreadings →</a></div>
       </section>
       <section className="card"><p className="eyebrow">BOOK FEATURE</p><h2>Branded Omega</h2><p>A featured novel connected to Namelesswriter&apos;s author profile. The publication page remains the external reading destination.</p><a href="https://m.pahina.com/novel/2611437824.html" target="_blank" rel="noreferrer">Open Branded Omega on Pahina →</a></section>
