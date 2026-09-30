@@ -6,6 +6,8 @@ export type Post = {
   date: string;
   content: string[];
   sources?: { label: string; url: string }[];
+  image: string;
+  imageAlt: string;
 };
 
 type Topic = Omit<Post, "content"> & {
