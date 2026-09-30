@@ -7,7 +7,7 @@ export default function IslaWasNeverHerName() {
     <p className="lead">A novel by SAB, a romance author and poet whose work explores romance, mystery, secrets and unforgettable characters.</p>
 
     <section className="feature">
-      <div className="book-cover-placeholder book-cover-large"><span>OFFICIAL COVER</span><small>Reserved upload area — replace this placeholder with the official cover when supplied by SAB.</small></div>
+      <div className="book-cover-wrap"><img className="book-cover-image" src="https://i.ibb.co/TBQx1mcB/IMG-20260929-WA0111.jpg" alt="Isla Was Never Her Name book cover by SAB" /><small>Official cover supplied for this book feature.</small></div>
       <h2>About the author</h2>
       <p>SAB is a romance author and the writer behind <strong>Isla Was Never Her Name</strong>. She is passionate about creating stories filled with romance, mystery, secrets, and unforgettable characters, turning ideas and emotions into stories readers can connect with.</p>
       <p>Outside writing, SAB loves novels, manga and manhwa and finds inspiration in the stories she reads.</p>
