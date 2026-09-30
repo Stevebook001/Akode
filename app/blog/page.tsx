@@ -25,7 +25,7 @@ export default async function Blog({ searchParams }: { searchParams: Promise<{ p
       </p>
       <div className="grid">
         {visible.map((post) => (
-          <article className="card" key={post.slug}>
+          <article className="card" key={post.slug}><img className="blog-thumb" src={post.image} alt={post.imageAlt} loading="lazy" />
             <p className="eyebrow">{post.category}</p>
             <h2>{post.title}</h2>
             <p>{post.excerpt}</p>
