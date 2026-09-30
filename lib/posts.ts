@@ -113,7 +113,7 @@ function buildContent(topic: Topic): string[] {
     `For readers, the result should feel like a useful digital headquarters. For developers, it should expose enough technical thinking to be credible. For authors and creators, it should provide discovery and promotion surfaces. For collaborators, it should make the work and the route to contact clear. Those goals can coexist when information architecture stays disciplined.`,
     `Finally, this article is part of a larger knowledge library. The value of a library is cumulative: one article answers one question, another records one project decision, and another introduces a book or creator. Over time those pages create a searchable record of the work itself. That is the long-term reason to keep documenting, improving and publishing.`
   ];
-  if (topic.editorial) return [...topic.editorial, ...unique.slice(0,12)];
+  if (topic.editorial) return [...topic.editorial, ...unique, ...baseParagraphs];
   return [intro, ...unique, ...baseParagraphs];
 }
 
