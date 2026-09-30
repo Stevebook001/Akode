@@ -23,13 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <header>
+        <header className="topbar">
           <a className="brand" href="/" aria-label="Ibrahim Akanni Ahmad home"><img src="https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png" alt="Ibrahim Akanni Ahmad" /></a>
-          <nav>
-            <a href="/">Home</a><a href="/about">About</a><a href="/projects">Projects</a>
-            <a href="/experience">Experience</a><a href="/stack">Stack</a><a href="/books">Books</a><a href="/blog">Blog</a>
-            <a href="/now">Now</a><a href="/contact">Contact</a>
-          </nav>
         </header>
         <div className="site-shell"><Sidebar /><div className="site-content">{children}</div></div>
         <footer>
