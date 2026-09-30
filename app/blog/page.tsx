@@ -1,4 +1,5 @@
 import { posts } from "@/lib/posts";
+import { postImage, postImageAlt } from "@/lib/postImages";
 
 export const metadata = {
   title: "Blog | Ibrahim Akanni Ahmad",
@@ -25,7 +26,7 @@ export default async function Blog({ searchParams }: { searchParams: Promise<{ p
       </p>
       <div className="grid">
         {visible.map((post) => (
-          <article className="card" key={post.slug}><img className="blog-thumb" src={post.image} alt={post.imageAlt} loading="lazy" />
+          <article className="card" key={post.slug}><img className="blog-thumb" src={postImage(post.category, post.title)} alt={postImageAlt(post.category, post.title)} loading="lazy" />
             <p className="eyebrow">{post.category}</p>
             <h2>{post.title}</h2>
             <p>{post.excerpt}</p>
