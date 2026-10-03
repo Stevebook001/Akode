@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { posts, postMap } from "@/lib/posts";
 import { postImage, postImageAlt } from "@/lib/postImages";
+import AdSlot from "@/app/components/AdSlot";
 
 export function generateStaticParams() { return posts.map((post) => ({ slug: post.slug })); }
 
@@ -18,7 +19,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   return <main className="page article">
     <p className="eyebrow">{post.category} · {post.date}</p>
     <h1>{post.title}</h1><img className="blog-cover" src={postImage(post.category, post.title)} alt={postImage(post.category, post.title)Alt} loading="eager" />
-    <p className="lead">{post.excerpt}</p>
+    <p className="lead">{post.excerpt}</p><div className="article-ad"><AdSlot /></div>
     {post.content.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
     {authorArticle && <section className="feature"><p className="eyebrow">FEATURED BOOK & AUTHOR</p><h2>Amadi Gift — Namelesswriter</h2><p>This portfolio includes a dedicated author feature and publication links supplied for the author. The links below lead to the external publication destinations.</p><div className="actions"><a className="button" href="/authors/namelesswriter">Author feature</a><a className="button alt" href="https://m.pahina.com/novel/2611437824.html" target="_blank" rel="noreferrer">Branded Omega →</a><a className="button alt" href="https://m.pahina.com/novel/3828441344.html" target="_blank" rel="noreferrer">Second novel →</a></div></section>}
     {post.sources?.length ? <section className="card"><h2>Sources &amp; further reading</h2>{post.sources.map((source) => <p key={source.url}><a href={source.url} target={source.url.startsWith("http") ? "_blank" : undefined} rel={source.url.startsWith("http") ? "noreferrer" : undefined}>{source.label} →</a></p>)}</section> : null}
