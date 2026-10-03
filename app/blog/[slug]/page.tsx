@@ -7,7 +7,7 @@ export function generateStaticParams() { return posts.map((post) => ({ slug: pos
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = postMap[slug];
-  return post ? { title: `${post.title} | Ibrahim Akanni Ahmad`, description: post.excerpt, alternates: { canonical: `/blog/${post.slug}` }, openGraph: { title: post.title, description: post.excerpt, type: "article", images: [{ url: postImage(post.category, post.title), alt: postImage(post.category, post.title)Alt }] }, twitter: { card: "summary_large_image", images: [postImage(post.category, post.title)] } } : {};
+  return post ? { title: `${post.title} | Ibrahim Akanni Ahmad`, description: post.excerpt, alternates: { canonical: `/blog/${post.slug}` }, openGraph: { title: post.title, description: post.excerpt, type: "article", url: `/blog/${post.slug}`, images: [{ url: `/blog/${post.slug}/opengraph-image`, width: 1200, height: 630, alt: postImageAlt(post.category, post.title) }] }, twitter: { card: "summary_large_image", images: [`/blog/${post.slug}/opengraph-image`] } } : {};
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
