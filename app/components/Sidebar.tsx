@@ -23,7 +23,7 @@ export default function Sidebar(){
       <a href="/">Home</a><a href="/about">About me</a><a href="/projects">Projects</a><a href="/experience">Experience</a><a href="/stack">Tech stack</a><a href="/now">Now</a><a href="/roadmap">Roadmap</a>
     </div>
     <div className="sidebar-section"><span className="sidebar-label">Library</span>
-      <a href="/blog">Articles</a><a href="/books">Books & authors</a><a href="/gallery">Gallery</a><a href="/notes">Notes</a><a href="/ai">AI</a>
+      <a href="/blog">Articles</a><a href="/books">Books & authors</a><a href="/gallery">Gallery</a><a href="/notes">Notes</a><a href="/ai">Aelia AI</a>
     </div>
     <div className="sidebar-section"><span className="sidebar-label">Connect</span><a href="/contact">Contact</a><a href="mailto:support@aeliaai.org.ng">Email support</a></div>
     <div className="sidebar-section"><label className="sidebar-label" htmlFor="language">Translate this site</label>
