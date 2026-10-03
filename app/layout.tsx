@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import Sidebar from "./components/Sidebar";
 import AeliaWidget from "./components/AeliaWidget";
+import AdSlot from "./components/AdSlot";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,17 +29,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a className="brand" href="/" aria-label="Ibrahim Akanni Ahmad home"><img src="https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png" alt="Ibrahim Akanni Ahmad" /></a>
         </header>
         <div className="site-shell"><Sidebar /><div className="site-content">{children}</div></div>
-        <footer>
-          <div className="footer-brand"><img src="https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png" alt="" /><div><strong>Ibrahim Akanni Ahmad</strong><span>Founder · Builder · Author · CEO</span></div></div>
-          <div className="footer-links">
-            <a href="/projects">Projects</a><a href="/experience">Experience</a><a href="/gallery">Gallery</a>
-            <a href="/notes">Notes</a><a href="/roadmap">Roadmap</a><a href="/books">Books</a><a href="/blog">Articles</a><a href="/ai">AI</a><a href="/contact">Contact</a>
+        <footer className="site-footer">
+          <div className="footer-top">
+            <div className="footer-identity">
+              <img src="https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png" alt="" />
+              <strong>Ibrahim Akanni Ahmad</strong>
+              <span>Founder · Builder · Author · CEO</span>
+              <p>Building software, AI, publishing and digital products from Lagos.</p>
+            </div>
+            <div><h3>Navigate</h3><a href="/">Home</a><a href="/about">About</a><a href="/projects">Projects</a><a href="/experience">Experience</a><a href="/stack">Stack</a><a href="/roadmap">Roadmap</a><a href="/contact">Contact</a></div>
+            <div><h3>Library</h3><a href="/blog">Blog</a><a href="/books">Books & authors</a><a href="/gallery">Gallery</a><a href="/notes">Notes</a><a href="/ai">Aelia</a></div>
+            <div><h3>Projects</h3><a href="/projects">Project archive</a><a href="/books">Publishing</a><a href="/blog">Knowledge library</a><a href="/ai">Aelia AI</a></div>
           </div>
-          <div className="footer-legal"><a href="/terms">Terms of Service</a><a href="/books-policy">Books Policy</a><a href="/code-of-conduct">Code of Conduct</a><a href="/cookies">Cookies Policy</a><a href="/privacy">Privacy</a></div>
-          <p>Contact: <a href="mailto:support@aeliaai.org.ng">support@aeliaai.org.ng</a> · <a href="mailto:no-reply@aeliaai.org.ng">no-reply@aeliaai.org.ng</a></p>
-          © {new Date().getFullYear()} Ibrahim Akanni Ahmad · Novella Matrix
-        </footer>
-        <AeliaWidget />
+          <div className="footer-ad"><span>ADVERTISEMENT</span><AdSlot /></div>
+          <div className="footer-bottom"><span>© {new Date().getFullYear()} Ibrahim Akanni Ahmad · Novella Matrix</span><div><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/cookies">Cookies</a><a href="/books-policy">Books Policy</a><a href="/code-of-conduct">Code of Conduct</a></div></div>
+        </footer>    <AeliaWidget />
         <Analytics />
       </body>
     </html>
