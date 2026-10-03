@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import Sidebar from "./components/Sidebar";
+import AeliaWidget from "./components/AeliaWidget";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <p>Contact: <a href="mailto:support@aeliaai.org.ng">support@aeliaai.org.ng</a> · <a href="mailto:no-reply@aeliaai.org.ng">no-reply@aeliaai.org.ng</a></p>
           © {new Date().getFullYear()} Ibrahim Akanni Ahmad · Novella Matrix
         </footer>
+        <AeliaWidget />
         <Analytics />
       </body>
     </html>
