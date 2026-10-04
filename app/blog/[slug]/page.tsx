@@ -8,7 +8,9 @@ export function generateStaticParams() { return posts.map((post) => ({ slug: pos
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = postMap[slug];
-  return post ? { title: `${post.title} | Ibrahim Akanni Ahmad`, description: post.excerpt, alternates: { canonical: `/blog/${post.slug}` }, openGraph: { title: post.title, description: post.excerpt, type: "article", url: `/blog/${post.slug}`, images: [{ url: `/blog/${post.slug}/opengraph-image`, width: 1200, height: 630, alt: (post.imageAlt ?? postImageAlt(post.category, post.title)) }] }, twitter: { card: "summary_large_image", images: [`/blog/${post.slug}/opengraph-image`] } } : {};
+  const url = `https://akode-nine.vercel.app/blog/${slug}`;
+  const image = `https://akode-nine.vercel.app/blog/${slug}/opengraph-image`;
+  return post ? { title: `${post.title} | Ibrahim Akanni Ahmad`, description: post.excerpt, alternates: { canonical: url }, openGraph: { title: post.title, description: post.excerpt, type: "article", url, siteName: "AKODE · Ibrahim Akanni Ahmad", images: [{ url: image, width: 1200, height: 630, alt: (post.imageAlt ?? postImageAlt(post.category, post.title)) }] }, twitter: { card: "summary_large_image", title: post.title, description: post.excerpt, images: [image] } } : {};
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {

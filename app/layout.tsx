@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: "Founder, developer, AI builder, publisher and author.",
     type: "website",
     url: "https://akode-nine.vercel.app",
-    images: [{ url: "https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png", width: 1200, height: 630, alt: "Ibrahim Akanni Ahmad — AKODE" }],
+    images: [{ url: "https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png", width: 1200, height: 630, type: "image/png", alt: "Ibrahim Akanni Ahmad — AKODE" }],
   },
   twitter: { card: "summary_large_image", images: ["https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png"] },
 };
