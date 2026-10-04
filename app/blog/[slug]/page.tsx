@@ -8,7 +8,7 @@ export function generateStaticParams() { return posts.map((post) => ({ slug: pos
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = postMap[slug];
-  return post ? { title: `${post.title} | Ibrahim Akanni Ahmad`, description: post.excerpt, alternates: { canonical: `/blog/${post.slug}` }, openGraph: { title: post.title, description: post.excerpt, type: "article", url: `/blog/${post.slug}`, images: [{ url: `/blog/${post.slug}/opengraph-image`, width: 1200, height: 630, alt: postImageAlt(post.category, post.title) }] }, twitter: { card: "summary_large_image", images: [`/blog/${post.slug}/opengraph-image`] } } : {};
+  return post ? { title: `${post.title} | Ibrahim Akanni Ahmad`, description: post.excerpt, alternates: { canonical: `/blog/${post.slug}` }, openGraph: { title: post.title, description: post.excerpt, type: "article", url: `/blog/${post.slug}`, images: [{ url: `/blog/${post.slug}/opengraph-image`, width: 1200, height: 630, alt: (post.imageAlt ?? postImageAlt(post.category, post.title)) }] }, twitter: { card: "summary_large_image", images: [`/blog/${post.slug}/opengraph-image`] } } : {};
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
@@ -18,7 +18,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const authorArticle = post.category === "Authors" || post.category === "Publishing";
   return <main className="page article">
     <p className="eyebrow">{post.category} · {post.date}</p>
-    <h1>{post.title}</h1><img className="blog-cover" src={postImage(post.category, post.title)} alt={postImage(post.category, post.title)Alt} loading="eager" />
+    <h1>{post.title}</h1><img className="blog-cover" src={(post.image ?? postImage(post.category, post.title))} alt={(post.imageAlt ?? postImageAlt(post.category, post.title))} loading="eager" />
     <p className="lead">{post.excerpt}</p><div className="article-ad"><AdSlot /></div>
     {post.content.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
     {authorArticle && <section className="feature"><p className="eyebrow">FEATURED BOOK & AUTHOR</p><h2>Amadi Gift — Namelesswriter</h2><p>This portfolio includes a dedicated author feature and publication links supplied for the author. The links below lead to the external publication destinations.</p><div className="actions"><a className="button" href="/authors/namelesswriter">Author feature</a><a className="button alt" href="https://m.pahina.com/novel/2611437824.html" target="_blank" rel="noreferrer">Branded Omega →</a><a className="button alt" href="https://m.pahina.com/novel/3828441344.html" target="_blank" rel="noreferrer">Second novel →</a></div></section>}
