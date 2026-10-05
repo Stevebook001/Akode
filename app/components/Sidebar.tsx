@@ -8,7 +8,7 @@ const languages = [
 
 const links = [
   ["Explore", [["Home", "/"], ["About me", "/about"], ["Projects", "/projects"], ["Experience", "/experience"], ["Tech stack", "/stack"], ["Now", "/now"], ["Roadmap", "/roadmap"]]],
-  ["Library", [["Articles", "/blog"], ["Books & authors", "/books"], ["Gallery", "/gallery"], ["Notes", "/notes"], ["Aelia AI", "/ai"]]],
+  ["Library", [["Articles", "/blog"], ["Books & authors", "/books"], ["Gallery", "/gallery"], ["Notes", "/notes"], ["Tools", "/tools"], ["Aelia AI", "/ai"]]],
   ["Connect", [["Contact", "/contact"], ["Email support", "mailto:support@aeliaai.org.ng"]]],
 ] as const;
 
