@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import Sidebar from "./components/Sidebar";
 import AeliaWidget from "./components/AeliaWidget";
 import AdSlot from "./components/AdSlot";
@@ -19,12 +20,19 @@ export const metadata: Metadata = {
     images: [{ url: "https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png", width: 1200, height: 630, type: "image/png", alt: "Ibrahim Akanni Ahmad — AKODE" }],
   },
   twitter: { card: "summary_large_image", images: ["https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png"] },
+  other: { "google-adsense-account": process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-2372165856534213" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2372165856534213"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <header className="topbar">
           <a className="brand" href="/" aria-label="Ibrahim Akanni Ahmad home"><img src="https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png" alt="Ibrahim Akanni Ahmad" /></a>
         </header>
