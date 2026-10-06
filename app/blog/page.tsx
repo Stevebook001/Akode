@@ -1,5 +1,5 @@
 import { posts } from "@/lib/posts";
-import { postImage, postImageAlt } from "@/lib/postImages";
+import BlogExplorer from "./BlogExplorer";
 
 export const metadata = {
   title: "Blog | Ibrahim Akanni Ahmad",
@@ -11,35 +11,25 @@ export default async function Blog({ searchParams }: { searchParams: Promise<{ p
   const requested = Number(params.page || "1");
   const page = Number.isFinite(requested) && requested > 0 ? Math.floor(requested) : 1;
   const perPage = 10;
-  const totalPages = Math.max(1, Math.ceil(posts.length / perPage));
-  const safePage = Math.min(page, totalPages);
-  const start = (safePage - 1) * perPage;
-  const visible = posts.slice(start, start + perPage);
+  const items = posts.map(({ slug, title, category, excerpt, date, image, imageAlt }) => ({
+    slug,
+    title,
+    category,
+    excerpt,
+    date,
+    image,
+    imageAlt,
+  }));
 
   return (
     <main className="page">
-      <p className="eyebrow">KNOWLEDGE LIBRARY · PAGE {safePage}</p>
+      <p className="eyebrow">KNOWLEDGE LIBRARY</p>
       <h1>AI, technology, SEO, publishing, authors & building.</h1>
       <p className="lead">
         A growing library of long-form articles documenting projects, lessons, author discovery and current industry news.
-        Articles are paginated so the index stays fast and readable as the library grows.
+        Search by topic or filter by category to find the right article quickly. The library stays paginated so it remains fast and readable as it grows.
       </p>
-      <div className="grid">
-        {visible.map((post) => (
-          <article className="card" key={post.slug}><img className="blog-thumb" src={(post.image ?? postImage(post.category, post.title))} alt={(post.imageAlt ?? postImageAlt(post.category, post.title))} loading="lazy" />
-            <p className="eyebrow">{post.category}</p>
-            <h2>{post.title}</h2>
-            <p>{post.excerpt}</p>
-            <p className="muted">{post.date}</p>
-            <a href={`/blog/${post.slug}`}>Read full article →</a>
-          </article>
-        ))}
-      </div>
-      <nav className="pagination" aria-label="Blog pages">
-        {safePage > 1 ? <a className="button alt" href={safePage === 2 ? "/blog" : `/blog?page=${safePage - 1}`}>← Previous</a> : <span />}
-        <span className="muted">Page {safePage} of {totalPages}</span>
-        {safePage < totalPages ? <a className="button" href={`/blog?page=${safePage + 1}`}>Next →</a> : <span />}
-      </nav>
+      <BlogExplorer posts={items} initialPage={page} perPage={perPage} />
     </main>
   );
 }
