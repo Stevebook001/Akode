@@ -210,7 +210,19 @@ const topics: Topic[] = [
   ], sources:[
     {label:"Reuters — Upscale AI launches Token Fabric",url:"https://www.reuters.com/business/nvidia-backed-upscale-ai-launches-platform-connect-chips-rival-suppliers-2026-10-08/"}
   ] }
-];
+  { slug:"authors-and-the-new-human-written-signal-october-8-2026", title:"Authors and the New Human-Written Signal: Why Publishing Is Thinking About Trust", category:"Authors", excerpt:"A look at the new human-authored certification conversation and what it could mean for writers, publishers and readers in an AI-heavy publishing market.", date:"October 8, 2026", focus:"the Books by People human-authored certification initiative reported by WIRED and the wider question of transparency around AI in books", details:["human-authored certification","AI transparency in publishing","reader trust and provenance","what authors should document"], editorial:[
+    "Publishing is entering a period where the question is no longer only whether a book is good, but also how readers can understand the process behind it. On October 7, 2026, WIRED reported that British startup Books by People had received approval from the UK's Intellectual Property Office for a mark intended to identify books that have been authored by humans.",
+    "The proposed certification is a response to a wider publishing debate around artificial intelligence. The idea is not that readers must reject AI-assisted work; rather, it creates another signal for readers who specifically want to choose human-authored books.",
+    "For authors, the interesting part is provenance. Drafts, research notes, version history and editorial records can become useful evidence of how a manuscript was created. Transparent publishing practices can become increasingly valuable when synthetic content is easy to generate.",
+    "For publishing platforms, this creates an opportunity to build better author profiles and clearer disclosure systems. A platform can show whether a story is human-authored, AI-assisted or uses AI for limited production tasks without reducing the writer to a single label.",
+    "That direction matters to author-first products such as GoRovik. GoRovik is still being built, so this is not a claim that it already provides such certification. It is a product-design lesson: authors deserve tools that help them establish identity, ownership, provenance and trust around their work.",
+    "Readers want stories, but they also increasingly want confidence in what they are reading. Platforms that make that confidence easier to understand could have an important role in the next phase of digital publishing."
+  ], sources:[
+    {label:"WIRED — Your Next Great Read Might Be Certified Organic",url:"https://www.wired.com/story/organic-literature-books-by-people-stamp-ai"},
+    {label:"Publishers Weekly — Digital publishing news",url:"https://www.publishersweekly.com/pw/by-topic/digital/index.html"}
+  ] },
+
+]; 
 
 const baseParagraphs = [
   "The first principle is to start with the user rather than the technology. A project can have an impressive technical stack and still fail to communicate its purpose. Clear language, predictable navigation and a useful first action reduce the distance between a visitor and the value of the product. For a growing ecosystem, this means every major page needs a reason to exist. A project page should explain a project, an article should answer a question, an author page should introduce an author and a contact page should make communication straightforward.",
