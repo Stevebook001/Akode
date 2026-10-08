@@ -235,6 +235,19 @@ const topics: Topic[] = [
     {label:"Royal Road — New Publishing Program",url:"https://www.royalroad.com/blog/70/i"}
   ] },
 
+  { slug:"hall-of-codes-member-spotlight-dave-conco-october-8-2026", title:"Hall of Codes Member Spotlight: Dave Conco and Agentic Coding on Android", category:"Development News", excerpt:"A public-profile spotlight on Hall of Codes member Dave Conco, his coding work and the Rutex AI agent project for Acode.", date:"October 8, 2026", focus:"public Hall of Codes information about Dave Conco and the Rutex Acode coding-agent project", details:["Hall of Codes Hall of Fame","Dave Conco public developer profile","Rutex AI Coding Agent for Acode","agentic coding on Android"], editorial:[
+    "Hall of Codes currently lists Dave Conco (@dconco) in its Hall of Fame and shows 42 hours 54 minutes of coding time on the public community page. The site identifies him with PHP, Go, Caddyfile, INI and CSS among his coding languages.",
+    "Dave's public portfolio describes him as a full-stack developer and backend engineer working with PHP, C++, Node.js and React, alongside custom frameworks, APIs, databases and developer tools.",
+    "Rutex is an autonomous AI coding agent for Acode Mobile. Its public repository describes a workflow that can read, analyze, edit and verify code, with terminal integration and context-aware operations.",
+    "The project is interesting because it brings agentic-development ideas into an Android coding environment instead of treating a mobile editor as only a text editor.",
+    "Hall of Codes describes itself as an open-source community where developers collaborate, mentor newcomers, review work and build projects together.",
+    "This is the kind of community story AKODE should keep documenting: not declaring someone the world's best developer, but highlighting public work, measurable community signals and projects that teach other builders something useful."
+  ], sources:[
+    {label:"Hall of Codes — Community homepage",url:"https://www.hallofcodes.org/"},
+    {label:"Hall of Codes — Member portfolios",url:"https://www.hallofcodes.org/portfolio"},
+    {label:"Rutex — GitHub repository",url:"https://github.com/dconco/acode-rutex-ai-agent"}
+  ] },
+
 ]; 
 
 const baseParagraphs = [
