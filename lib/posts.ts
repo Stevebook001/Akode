@@ -209,7 +209,7 @@ const topics: Topic[] = [
     "Today's infrastructure news is therefore useful even for small builders: understand the layers beneath the model before assuming that a model alone is the product."
   ], sources:[
     {label:"Reuters — Upscale AI launches Token Fabric",url:"https://www.reuters.com/business/nvidia-backed-upscale-ai-launches-platform-connect-chips-rival-suppliers-2026-10-08/"}
-  ] }
+  ] },
   { slug:"authors-and-the-new-human-written-signal-october-8-2026", title:"Authors and the New Human-Written Signal: Why Publishing Is Thinking About Trust", category:"Authors", excerpt:"A look at the new human-authored certification conversation and what it could mean for writers, publishers and readers in an AI-heavy publishing market.", date:"October 8, 2026", focus:"the Books by People human-authored certification initiative reported by WIRED and the wider question of transparency around AI in books", details:["human-authored certification","AI transparency in publishing","reader trust and provenance","what authors should document"], editorial:[
     "Publishing is entering a period where the question is no longer only whether a book is good, but also how readers can understand the process behind it. On October 7, 2026, WIRED reported that British startup Books by People had received approval from the UK's Intellectual Property Office for a mark intended to identify books that have been authored by humans.",
     "The proposed certification is a response to a wider publishing debate around artificial intelligence. The idea is not that readers must reject AI-assisted work; rather, it creates another signal for readers who specifically want to choose human-authored books.",
