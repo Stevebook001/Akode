@@ -248,6 +248,18 @@ const topics: Topic[] = [
     {label:"Rutex — GitHub repository",url:"https://github.com/dconco/acode-rutex-ai-agent"}
   ] },
 
+  { slug:"learning-to-code-in-2026-beyond-ai-answers-october-8-2026", title:"Learning to Code in 2026: What Developers Need Beyond AI Answers", category:"Development News", excerpt:"A short analysis of the 2026 developer survey and GitHub guidance on learning and reviewing code in an AI-assisted workflow.", date:"October 8, 2026", focus:"developer learning and responsible AI-assisted coding", details:["developer learning","AI-assisted coding","code review","coding education"], editorial:[
+    "The 2026 Stack Overflow Developer Survey collected responses from more than 30,000 technologists across 169 countries.",
+    "For people learning to code, the useful lesson is not that traditional programming has disappeared. The skill set is expanding: developers need to ask AI systems for useful help, inspect the result, test it and decide when the output is wrong.",
+    "GitHub's recent guidance similarly emphasizes directing AI agents, reviewing their output and keeping technical judgment at the center of development.",
+    "Beginners still need fundamentals such as data structures, HTTP, databases, Git, testing, debugging and architecture. They can also learn responsible AI-assisted workflows from the beginning.",
+    "A strong teacher should make learners explain generated code, modify it, test it and eventually solve the same class of problem independently.",
+    "Communities such as Hall of Codes add something an AI answer alone cannot provide: human feedback, mentorship, code review and professional habits."
+  ], sources:[
+    {label:"Stack Overflow — 2026 Developer Survey",url:"https://stackoverflow.blog/2026/10/06/the-results-of-the-2026-developer-survey-are-here/"},
+    {label:"GitHub Blog — The latest blogs",url:"https://github.blog/latest/"}
+  ] },
+
 ]; 
 
 const baseParagraphs = [
