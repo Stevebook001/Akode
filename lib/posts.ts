@@ -222,6 +222,19 @@ const topics: Topic[] = [
     {label:"Publishers Weekly — Digital publishing news",url:"https://www.publishersweekly.com/pw/by-topic/digital/index.html"}
   ] },
 
+  { slug:"gorovik-vs-inkitt-royal-road-and-author-platforms-october-8-2026", title:"GoRovik vs Inkitt and Royal Road: Where an Author-First Platform Could Fit", category:"Publishing", excerpt:"A current positioning study comparing GoRovik's intended author-first direction with established platforms such as Inkitt and Royal Road.", date:"October 8, 2026", focus:"current public capabilities of Inkitt and Royal Road compared with the intended positioning of GoRovik", details:["Inkitt reader-powered publishing and subscriptions","Royal Road web-serial discovery and publishing relationships","GoRovik author-first positioning","positioning study rather than a feature benchmark"], editorial:[
+    "GoRovik should not be presented as if it has already beaten established publishing platforms. It is still a product being built. A more useful question is what space GoRovik could occupy if its author-first roadmap is executed well.",
+    "Inkitt describes itself as a reader-powered publisher. Its current author offering includes analytics, reader feedback, A/B testing, audio production, translations and an author subscription program. Inkitt also says authors retain their rights to stories uploaded to the platform.",
+    "Royal Road has a different strength. It is associated with web novels and fan fiction, and its publishing program connects qualifying authors with external publishing partners. Its official publishing announcement describes a path where authors can submit manuscripts through the author dashboard and receive marketing support if a deal is reached.",
+    "GoRovik's intended direction is different. The product vision is centered on giving authors a durable home for writing, publishing, discovery, promotion and growth rather than treating the author profile as a secondary feature of a reader app.",
+    "The potential differentiator is the ecosystem around the author: profile, books, links, promotion, analytics, discovery, publishing tools and a clear public identity that can travel with the creator.",
+    "The honest comparison today is that Inkitt and Royal Road are established platforms with live communities and publishing workflows, while GoRovik is an emerging author-first project with a larger intended ecosystem still under construction."
+  ], sources:[
+    {label:"Inkitt for Writers",url:"https://www.inkitt.com/writers"},
+    {label:"Inkitt Author Subscription Program",url:"https://inkitt.zendesk.com/hc/en-us/articles/9887360213394-What-is-the-Author-Subscription-Program-and-how-can-i-join"},
+    {label:"Royal Road — New Publishing Program",url:"https://www.royalroad.com/blog/70/i"}
+  ] },
+
 ]; 
 
 const baseParagraphs = [
