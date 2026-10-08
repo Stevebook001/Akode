@@ -1,4 +1,5 @@
 import { posts } from "@/lib/posts";
+import { postImage, postImageAlt } from "@/lib/postImages";
 import BlogExplorer from "./BlogExplorer";
 
 export const metadata = {
@@ -17,8 +18,8 @@ export default async function Blog({ searchParams }: { searchParams: Promise<{ p
     category,
     excerpt,
     date,
-    image,
-    imageAlt,
+    image: image ?? postImage(category, title),
+    imageAlt: imageAlt ?? postImageAlt(category, title),
   }));
 
   return (
