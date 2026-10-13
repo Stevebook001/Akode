@@ -1,0 +1,7 @@
+import { ImageResponse } from "next/og";
+import { aboutPageMap } from "@/lib/aboutPages";
+export const runtime="edge";
+export const alt="AKODE about article";
+export const size={width:1200,height:630};
+export const contentType="image/png";
+export default async function Image({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=aboutPageMap[slug];return new ImageResponse(<div style={{width:"100%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"64px",background:"linear-gradient(135deg,#fff 0%,#f7f2ff 45%,#e8fbff 100%)",color:"#142033",fontFamily:"Arial"}}><div style={{display:"flex",alignItems:"center",gap:18,fontSize:26,fontWeight:800}}><div style={{width:14,height:14,borderRadius:999,background:"#7b35e8"}}/>AKODE · ABOUT JOURNAL</div><div style={{display:"flex",flexDirection:"column",gap:18}}><div style={{fontSize:24,color:"#7040cf",fontWeight:700}}>{p?.category??"Founder profile"}</div><div style={{fontSize:58,lineHeight:1.12,fontWeight:800}}>{p?.title??"Ibrahim Akanni Ahmad"}</div><div style={{fontSize:24,lineHeight:1.35,color:"#4b5563"}}>{p?.excerpt??"Founder, builder, author and digital product journey."}</div></div><div style={{fontSize:20,color:"#475569"}}>AKODE · Published {p?.date??"October 2026"}</div></div>,{...size});}
