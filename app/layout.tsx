@@ -7,7 +7,7 @@ import AdSlot from "./components/AdSlot";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ibrahim Akanni Ahmad | Founder, Developer & Author",
+  title: { default: "Ibrahim Akanni Ahmad | Founder, Developer & Author", template: "%s | AKODE" },
   description: "The digital headquarters of Ibrahim Akanni Ahmad — founder, builder, author and creator of a growing technology, publishing and AI ecosystem.",
   metadataBase: new URL("https://akode-nine.vercel.app"),
   icons: { icon: "https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png", apple: "https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png" },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://akode-nine.vercel.app",
     images: [{ url: "https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png", width: 1200, height: 630, type: "image/png", alt: "Ibrahim Akanni Ahmad — AKODE" }],
   },
-  twitter: { card: "summary_large_image", images: ["https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png"] },
+  twitter: { card: "summary_large_image", images: ["https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png"], title: "Ibrahim Akanni Ahmad | AKODE", description: "Founder, builder, author and creator of a growing technology, publishing and AI ecosystem." },
   other: { "google-adsense-account": process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-2372165856534213" },
 };
 
