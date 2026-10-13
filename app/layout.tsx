@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "Ibrahim Akanni Ahmad | Founder, Developer & Author",
   description: "The digital headquarters of Ibrahim Akanni Ahmad — founder, builder, author and creator of a growing technology, publishing and AI ecosystem.",
   metadataBase: new URL("https://akode-nine.vercel.app"),
-  alternates: { canonical: "/" },
   icons: { icon: "https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png", apple: "https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png" },
   openGraph: {
     title: "Ibrahim Akanni Ahmad",
@@ -45,12 +44,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span>Founder · Builder · Author · CEO</span>
               <p>Building software, AI, publishing and digital products from Lagos.</p>
             </div>
-            <div><h3>Navigate</h3><a href="/">Home</a><a href="/about">About</a><a href="/projects">Projects</a><a href="/experience">Experience</a><a href="/stack">Stack</a><a href="/roadmap">Roadmap</a><a href="/contact">Contact</a></div>
+            <div><h3>Navigate</h3><a href="/">Home</a><a href="/explore">Explore</a><a href="/marketplace">Marketplace</a><a href="/about/ibrahim-akanni-ahmad">About</a><a href="/projects">Projects</a><a href="/experience">Experience</a><a href="/stack">Stack</a><a href="/roadmap">Roadmap</a><a href="/contact">Contact</a></div>
             <div><h3>Library</h3><a href="/blog">Blog</a><a href="/books">Books & authors</a><a href="/gallery">Gallery</a><a href="/notes">Notes</a><a href="/tools">Tools</a><a href="/ai">Aelia</a></div>
-            <div><h3>Projects</h3><a href="/projects">Project archive</a><a href="/books">Publishing</a><a href="/blog">Knowledge library</a><a href="/ai">Aelia AI</a></div>
+            <div><h3>Projects</h3><a href="/projects">Project archive</a><a href="/books">Publishing</a><a href="/blog">Knowledge library</a><a href="/ai">Aelia AI</a><a href="/marketplace">Marketplace</a></div><div className="footer-socials"><h3>Socials</h3><a href="https://github.com/Stevebook001" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.youtube.com/@NOVELLAMATRIX-q7q" target="_blank" rel="noreferrer">YouTube ↗</a><a href="https://www.linkedin.com/in/novella-matrix-69118b414" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.tiktok.com/@a.ktechstudio2?lang=en" target="_blank" rel="noreferrer">TikTok ↗</a><a href="mailto:support@aeliaai.org.ng">Email support</a></div>
           </div>
           <div className="footer-ad"><span>ADVERTISEMENT</span><AdSlot /></div>
-          <div className="footer-bottom"><span>© {new Date().getFullYear()} Ibrahim Akanni Ahmad · Novella Matrix</span><div><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/cookies">Cookies</a><a href="/books-policy">Books Policy</a><a href="/code-of-conduct">Code of Conduct</a></div></div>
+          <div className="footer-bottom"><span>© {new Date().getFullYear()} Ibrahim Akanni Ahmad · Novella Matrix</span><div><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/cookies">Cookies</a><a href="/books-policy">Books Policy</a><a href="/code-of-conduct">Code of Conduct</a><a href="/marketplace/terms">Marketplace Terms</a><a href="/marketplace/kedi-distributor-policy">Kedi Policy</a><a href="/marketplace/refund-policy">Refunds</a><a href="/marketplace/client-agreement">Client Agreement</a><a href="/marketplace/technology-policy">Technology Policy</a></div></div>
         </footer>    <AeliaWidget />
         <Analytics />
       </body>
