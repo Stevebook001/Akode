@@ -7,7 +7,7 @@ const languages = [
 ];
 
 const links = [
-  ["Explore", [["Home", "/"], ["About me", "/about"], ["Projects", "/projects"], ["Experience", "/experience"], ["Tech stack", "/stack"], ["Now", "/now"], ["Roadmap", "/roadmap"]]],
+  ["Explore", [["Explore hub", "/explore"], ["Marketplace", "/marketplace"], ["Home", "/"], ["About me", "/about/ibrahim-akanni-ahmad"], ["Projects", "/projects"], ["Experience", "/experience"], ["Tech stack", "/stack"], ["Now", "/now"], ["Roadmap", "/roadmap"]]],
   ["Library", [["Articles", "/blog"], ["Books & authors", "/books"], ["Gallery", "/gallery"], ["Notes", "/notes"], ["Tools", "/tools"], ["Aelia AI", "/ai"]]],
   ["Connect", [["Contact", "/contact"], ["Email support", "mailto:support@aeliaai.org.ng"]]],
 ] as const;
@@ -16,6 +16,7 @@ export default function Sidebar() {
   const [language, setLanguage] = useState("en");
   const [open, setOpen] = useState(true);
   const [permanent, setPermanent] = useState(false);
+  const [exploreOpen, setExploreOpen] = useState(false);
 
   useEffect(() => {
     setPermanent(window.localStorage.getItem("akode-sidebar-closed") === "1");
@@ -47,6 +48,7 @@ export default function Sidebar() {
         <img src="https://i.ibb.co/B50Jq1Cj/Chat-GPT-Image-Sep-27-2026-08-04-03-AM.png" alt="Ibrahim Akanni Ahmad" />
         <strong>Ibrahim Akanni Ahmad</strong><span>Founder · Builder · Author</span>
       </div>
+      <div className="sidebar-section sidebar-explore-launch"><button type="button" onClick={() => setExploreOpen(!exploreOpen)} aria-expanded={exploreOpen}>✦ Explore everything {exploreOpen ? "−" : "+"}</button>{exploreOpen && <div className="sidebar-explore-popup"><a href="/explore" onClick={() => setOpen(false)}>Explore hub ↗</a><a href="/marketplace" onClick={() => setOpen(false)}>Marketplace ↗</a><a href="/blog" onClick={() => setOpen(false)}>Latest articles ↗</a><a href="/projects" onClick={() => setOpen(false)}>Projects ↗</a><a href="/books" onClick={() => setOpen(false)}>Books & authors ↗</a></div>}</div>
       {links.map(([section, sectionLinks]) => <div className="sidebar-section" key={section}>
         <span className="sidebar-label">{section}</span>
         {sectionLinks.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>)}
